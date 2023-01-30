@@ -47,10 +47,10 @@
 const pswInput = firstName + lastName + preferredColor + randomNumber;
 
 // funzione che randomizza la posizione dei caratteri in input e restituisce una psw casuale
-function generateString(length) {
+function generateString(newPswLength) {
     let newPsw = ' ';
     const pswInputLength = pswInput.length;
-    for ( let i = 0; i < length; i++ ) {
+    for ( let i = 0; i < newPswLength; i++ ) {
         newPsw += pswInput.charAt(Math.floor(Math.random() * pswInputLength));
     }
 
@@ -60,8 +60,11 @@ function generateString(length) {
 // non serve più
 // console.log('la tua nuova psw è:', generateString(pswInput.length));
 
+// richiedi numero desiderato lunghezza psw
+let newPswLength = prompt('inserisci il numero di lettere desiderato')
+
 //store output funzione in variabile
-let newUserPsw = generateString(pswInput.length);
+let newUserPsw = generateString(newPswLength);
 console.log('la nuova psw randomizzata è:', newUserPsw);
 
 // visualizzo in file HTML la new psw
