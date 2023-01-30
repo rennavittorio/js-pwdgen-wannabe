@@ -27,7 +27,17 @@
 //5. Mostrare sulla pagina il risultato della concatenazione di: <nome><cognome><colorePreferito><numero> (es. GianlucaLomarcoRosso108)
     // 5.1 Dichiarare var newPswUser
     // 5.2 Assegnare a var valori concatenati inseriti da utente
-    // 5.3 Inviare nuovo valore a schermo
+    let newPswUser = firstName + lastName + preferredColor + randomNumber;
+    console.log('la nuova psw generata è:', newPswUser);
+
+    // 5.3 Richiamare elemento HTML da modificare
+    let currentPsw = document.getElementById('generated-psw');
+    console.log('l\'attuale psw è:', currentPsw.innerHTML);
+    // 5.4 Modificare elemento HTML inserendo a schermo il valore generato
+    currentPsw.innerHTML = newPswUser;
+    console.log('la nuova psw scelta è:', currentPsw.innerHTML);
+
+
 
 
 //N.B. Dichiarare una var e assegnare valore possono essere svolte assieme (i.e. 'inizializzare')
