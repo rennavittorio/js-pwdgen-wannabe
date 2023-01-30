@@ -33,6 +33,23 @@
     color: red;
 }
 
-.app__psw {
+.psw__gen {
+    position: relative;
     margin-bottom: 3rem;
+}
+
+.app__psw {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    display: none;
+}
+
+.psw__gen:hover  {
+    color: transparent;
+}
+
+.psw__gen:hover .app__psw {
+    display: block;
+    color: black;
 }
